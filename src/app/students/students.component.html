@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+
+
+<div class="studentpage">
+    <div class="left">
+    <div class="filter">
+
+        <button class="navbtn" routerLink="/dashboard/all">Show all Students</button>
+        <button class="navbtn" routerLink="/dashboard/with-balance">Students With Balance</button>
+        <button class="navbtn" routerLink="/dashboard/without-balance">Students Without Balance</button>
+        
+     </div>
+  <div class="navleft">
+    <!-- <p>Student Details</p> -->
+    <label>Student's Full Names</label>
+    <input type="text" [(ngModel)]="student_array.name" />
+    <label>School Fees Balance</label>
+    <input type="number" [(ngModel)]="student_array.balance" />
+    <button  (click)="student_array.OnAdd()" >Add Student</button>
+  </div>
+
+</div>
+  <div class="table" *ngIf="student_array.students.length; else noStudent">
+    
+    <router-outlet></router-outlet>
+</div>
+
+  <ng-template #noStudent>
+    <p>No Students Registered Yet</p>
+  </ng-template>
+</div>

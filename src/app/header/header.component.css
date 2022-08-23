@@ -1,0 +1,12 @@
+.header{
+    height: 20px;
+    padding: 10px;
+    background-color: rgb(100, 100, 215);
+    color:aliceblue;
+    /* font-size: bold; */
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    /* font-size: 35px; */
+    border-radius: 5px;
+}

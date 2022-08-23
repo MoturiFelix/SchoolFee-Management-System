@@ -1,0 +1,44 @@
+
+
+
+<div class="studentpage">
+
+
+
+
+    <div class="table" *ngIf="student_array.students.length; else noStudent">
+      
+      <div >
+        <!-- <div class="content">
+          <h4>{{ student.name }}</h4>
+          <p>Balance: Ksh. {{ student.balance }}</p>
+        </div> -->
+        <table>
+          <thead>
+              <tr>
+                  <th>Student Name</th>
+                  <th>Fee Balance(KSH.)</th>
+                  <th class="action"></th>
+                </tr>
+          </thead>
+      
+          <tbody *ngFor="let student of getWIthOutBalance()">
+              <tr> 
+                  <td>{{ student.name }}</td>
+                  <td>{{ student.balance }}</td>
+                  <td class="action"> <button   class='dlt-btn'>EDIT</button>
+                  <button class='dlt-btn'>DELETE</button></td>
+                  
+                </tr>
+          </tbody>
+      
+          
+        </table>
+      </div>
+    </div>
+  
+    <ng-template #noStudent>
+      <p>No Students Registered Yet</p>
+    </ng-template>
+  </div>
+  
